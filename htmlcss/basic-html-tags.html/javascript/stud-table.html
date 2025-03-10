@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+</head>
+<body>
+    <div id="studentList"></div>
+    <script>
+        const students = [
+            { id: 1, name: "Swetha", age: 20 },
+            { id: 2, name: "Nisha", age: 20 },
+            { id: 3, name: "Aishu", age: 21 },
+            { id: 4, name: "Nivetha", age: 21 },
+            { id: 5, name: "Parvathi", age: 21 }
+        ];
+        
+        const studentListDiv = document.getElementById("studentList");
+        let html = "<h2>Student List</h2>";
+        html += "<table border='1'><thead><tr><th>ID</th><th>Name</th><th>Age</th></tr></thead><tbody>";
+        
+        for (let i = 0; i < students.length; i++) {
+            html += `<tr>
+                        <td>${students[i].id}</td>
+                        <td>${students[i].name}</td>
+                        <td>${students[i].age}</td>
+                    </tr>`;
+        }
+        
+        html += "</tbody></table>";
+        studentListDiv.innerHTML = html;
+    </script>
+</body>
+</html>

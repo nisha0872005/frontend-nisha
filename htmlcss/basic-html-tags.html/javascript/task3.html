@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="studentList"></div>
+    <script>
+        const students = [
+            { id: 1, name: "swetha", age: 20 },
+            { id: 2, name: "Nisha", age: 20 },
+            { id: 3, name: "Aishu", age: 21 },
+            { id: 4, name: "Nivetha", age: 21 },
+            { id: 5, name: "Parvathi", age: 21 }
+        ];
+        const studentListDiv = document.getElementById("studentList");
+        let html = "<h2>Student List</h2><ul>";
+        for (let i = 0; i < students.length; i++) 
+        {
+            html += `<li>${students[i].id}. ${students[i].name} - Age: ${students[i].age}</li>`;
+        }
+        html += "</ul>";
+        studentListDiv.innerHTML = html;
+    </script>
+</body>
+</html>
