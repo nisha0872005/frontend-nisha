@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table</title>
+</head>
+<body>
+    <div id="employeeList" align="center"></div>
+    <script>
+        
+        const employees = [
+            { empId: 1, empName: "Nisha", empDes: "Manager", empDoj: "2020-01-15" },
+            { empId: 2, empName: "Nivetha", empDes: "Developer", empDoj: "2021-03-10" },
+            { empId: 3, empName: "Aishu", empDes: "Designer", empDoj: "2022-05-22" },
+            { empId: 4, empName: "Swetha", empDes: "HR", empDoj: "2019-08-30" },
+            { empId: 5, empName: "Parvathi", empDes: "Sales", empDoj: "2021-11-01" }
+        ];
+
+        const employeeListDiv = document.getElementById("employeeList");
+        let html = "<h2>Employee List</h2>";
+        html += "<table border='1'><thead><tr><th>EmpID</th><th>EmpName</th><th>EmpDes</th><th>EmpDOJ</th></tr></thead><tbody>";
+
+        
+        for (let i = 0; i < employees.length; i++) {
+            html += `<tr>
+                        <td>${employees[i].empId}</td>
+                        <td>${employees[i].empName}</td>
+                        <td>${employees[i].empDes}</td>
+                        <td>${employees[i].empDoj}</td>
+                      </tr>`;
+        }
+
+        html += "</tbody></table>";
+        employeeListDiv.innerHTML = html;
+    </script>
+</body>
+</html>
